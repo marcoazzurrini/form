@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    html,
+    body {
+      overflow: hidden;
+    }
+    body {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .mainForm {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      max-width: 100%;
+      width: 700px;
+      padding: 1rem;
+    }
+
+    .mainForm__privacy {
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .mainForm__group {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .mainForm__group input {
+      width: 48% !important;
+    }
+
+    .mainForm__input {
+      border: none;
+      padding: 1rem;
+      border-radius: 3px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      background: rgb(245, 245, 245);
+      font-size: 20px;
+    }
+
+    .mainForm__btn {
+      background: #98a2a1;
+      border-radius: 3px;
+      height: 50px;
+      width: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+      border: none;
+      color: white;
+      font-weight: bold;
+      margin-top: 2rem;
+    }
+
+    @media only screen and (max-width: 1000px) {
+      * {
+        max-width: 100% !important;
+      }
+      .mainForm__group {
+        flex-direction: column;
+      }
+
+      .mainForm__group input {
+        width: 100% !important;
+      }
+    }
+  </style>
+
+  <body>
+    <form class="mainForm">
+      <div class="mainForm__group">
+        <input type="text" class="mainForm__input" placeholder="Full name" />
+        <input
+          type="text"
+          class="mainForm__input"
+          placeholder="Email address"
+        />
+      </div>
+      <textarea
+        type="text"
+        class="mainForm__input"
+        placeholder="Message"
+        rows="10"
+      ></textarea>
+      <p>
+        I authorize the processing of my data as specified in the
+        <a href="#" class="mainForm__privacy">privacy policy</a>
+        of this webiste
+      </p>
+      <button type="submit" class="mainForm__btn">SEND</button>
+    </form>
+  </body>
+</html>
